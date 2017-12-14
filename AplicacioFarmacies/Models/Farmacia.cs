@@ -10,9 +10,9 @@ namespace AplicacioFarmacies.Models
     {
         [Key]
         public int IdFarmacia { get; set; }
-        [Display(Name = "Codi de la farmacia")]
+        [Display(Name = "Codi de la farmàcia")]
         public string CodiFarmacia { get; set; }
-        [Display(Name = "Nom de la farmacia")]
+        [Display(Name = "Nom de la farmàcia")]
         public string NomFarmacia { get; set; }
         [Display(Name = "Tipus de via")]
         public string TipusVia { get; set; }
@@ -24,6 +24,8 @@ namespace AplicacioFarmacies.Models
         public string NumeroTelefon { get; set; }
         [Display(Name = "Area bàsica de salut")]
         public string AreaBasicaSalut { get; set; }
+        [Display(Name = "Comentaris de la farmàcia")]
+        public List<String> Comentaris { get; set; }
 
         [Display(Name = "Població")]
         public int IdPoblacio { get; set; }
