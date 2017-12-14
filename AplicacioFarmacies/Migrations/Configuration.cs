@@ -5,14 +5,14 @@ namespace AplicacioFarmacies.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AplicacioFarmacies.Models.Test>
+    internal sealed class Configuration : DbMigrationsConfiguration<AplicacioFarmacies.Models.FarmaciaContext>
     {
         public Configuration()
         {
             AutomaticMigrationsEnabled = false;
         }
 
-        protected override void Seed(AplicacioFarmacies.Models.Test context)
+        protected override void Seed(AplicacioFarmacies.Models.FarmaciaContext context)
         {
             //  This method will be called after migrating to the latest version.
 
