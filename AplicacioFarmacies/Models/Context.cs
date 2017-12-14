@@ -4,38 +4,16 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using System.Data.Entity;
 
 namespace AplicacioFarmacies.Models
 {
 
-    class Test
+    public class Test: DbContext
     {
-        public static void Cargar()
-        {
-            try
-            {
-                using (StreamReader sr = new StreamReader("C:/Users/victo/Downloads/farmacies.csv"))
-                {
-                    string currentLine;
-                    // currentLine will be null when the StreamReader reaches the end of file
-                    while ((currentLine = sr.ReadLine()) != null)
-                    {
-                        // Search, case insensitive, if the currentLine contains the searched keyword
-                        if (currentLine.IndexOf("I/RPTGEN", StringComparison.CurrentCultureIgnoreCase) >= 0)
-                        {
-                            Console.WriteLine(currentLine);
-                        }
-                    }
-                }
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine("The File could not be read:");
-                Console.WriteLine(e.Message);
-
-                Console.ReadLine();
-            }
-        }
+        public DbSet<Provincia> Provincies { get; set; }
+        public DbSet<Poblacio> Poblacions { get; set; }
+        public DbSet<Farmacia> Farmacies { get; set; }
     }
 }
 
