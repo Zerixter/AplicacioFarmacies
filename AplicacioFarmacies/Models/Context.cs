@@ -11,7 +11,7 @@ using System.Data.Entity.Validation;
 namespace AplicacioFarmacies.Models
 {
 
-    public class Test: DbContext
+    public class FarmaciaContext: DbContext
     {
         public DbSet<Provincia> Provincies { get; set; }
         public DbSet<Poblacio> Poblacions { get; set; }
