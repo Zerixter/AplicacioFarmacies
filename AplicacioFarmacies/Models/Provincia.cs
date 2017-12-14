@@ -13,6 +13,6 @@ namespace AplicacioFarmacies.Models
         [Display(Name = "Nom de la provincia")]
         public string NomProvincia { get; set; }
 
-        public virtual List<Poblacio> Poblacions { get; set } = new List<Poblacio>();
+        public virtual List<Poblacio> Poblacions { get; set; } = new List<Poblacio>();
     }
 }
