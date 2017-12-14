@@ -1,0 +1,82 @@
+﻿@model AplicacioFarmacies.Models.Farmacia
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Farmacia</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Poblacio.NomPoblacio)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Poblacio.NomPoblacio)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.CodiFarmacia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.CodiFarmacia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomFarmacia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomFarmacia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.TipusVia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.TipusVia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.Carrer)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Carrer)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroVia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroVia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NumeroTelefon)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NumeroTelefon)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.AreaBasicaSalut)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.AreaBasicaSalut)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdFarmacia }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

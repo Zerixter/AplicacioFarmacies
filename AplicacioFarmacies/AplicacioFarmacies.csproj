@@ -148,7 +148,10 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\FarmaciasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
+    <Compile Include="Controllers\PoblaciosController.cs" />
+    <Compile Include="Controllers\ProvinciasController.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
@@ -200,6 +203,21 @@
     <Content Include="Views\Home\About.cshtml" />
     <Content Include="Views\Home\Contact.cshtml" />
     <Content Include="Views\Home\Index.cshtml" />
+    <Content Include="Views\Farmacias\Create.cshtml" />
+    <Content Include="Views\Farmacias\Delete.cshtml" />
+    <Content Include="Views\Farmacias\Details.cshtml" />
+    <Content Include="Views\Farmacias\Edit.cshtml" />
+    <Content Include="Views\Farmacias\Index.cshtml" />
+    <Content Include="Views\Poblacios\Create.cshtml" />
+    <Content Include="Views\Poblacios\Delete.cshtml" />
+    <Content Include="Views\Poblacios\Details.cshtml" />
+    <Content Include="Views\Poblacios\Edit.cshtml" />
+    <Content Include="Views\Poblacios\Index.cshtml" />
+    <Content Include="Views\Provincias\Create.cshtml" />
+    <Content Include="Views\Provincias\Delete.cshtml" />
+    <Content Include="Views\Provincias\Details.cshtml" />
+    <Content Include="Views\Provincias\Edit.cshtml" />
+    <Content Include="Views\Provincias\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
