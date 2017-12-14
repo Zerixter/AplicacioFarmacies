@@ -5,7 +5,7 @@ namespace AplicacioFarmacies.Migrations
     using System.Data.Entity.Migrations;
     using System.Linq;
 
-    internal sealed class Configuration : DbMigrationsConfiguration<AplicacioFarmacies.Models.Test>
+    internal sealed class Configuration : DbMigrationsConfiguration<AplicacioFarmacies.Models.FarmaciaContext>
     {
         public Configuration()
         {
