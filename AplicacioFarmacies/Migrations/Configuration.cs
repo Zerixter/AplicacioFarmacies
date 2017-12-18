@@ -32,45 +32,55 @@ namespace AplicacioFarmacies.Migrations
                 }
 
                 context.SaveChanges();
-                using (StreamReader sr = new StreamReader("Archivos/farmacies.csv"))
+                using (StreamReader sr = new StreamReader("./Archivos/farmacies.csv"))
                 {
                     string currentLine;
                     while ((currentLine = sr.ReadLine()) != null){
                         var arrayM = currentLine.Split(';');
 
-                        var poblacio = new Poblacio();
-                        poblacio.NomPoblacio = arrayM[3];
-                        poblacio.CP = int.Parse(arrayM[5]);
-                        if (arrayM[5].Substring(0, 2).Equals("08"))
-                        {
-                            poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Barcelona").First().IdProvincia;
+                        if (!context.Poblacions.Where(x => x.CP == int.Parse(arrayM[5])).Any()){
+                            var poblacio = new Poblacio();
+                            poblacio.NomPoblacio = arrayM[3];
+                            poblacio.CP = int.Parse(arrayM[5]);
+                            if (arrayM[5].Substring(0, 2).Equals("08"))
+                            {
+                                poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Barcelona").First().IdProvincia;
+                            }
+                            if (arrayM[5].Substring(0, 2).Equals("17"))
+                            {
+                                poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Girona").First().IdProvincia;
+                            }
+                            if (arrayM[5].Substring(0, 2).Equals("25"))
+                            {
+                                poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Lleida").First().IdProvincia;
+                            }
+                            if (arrayM[5].Substring(0, 2).Equals("43"))
+                            {
+                                poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Tarragona").First().IdProvincia;
+                            }
+                            context.Poblacions.Add(poblacio);
+                            context.SaveChanges();
                         }
-                    }
-                    // currentLine will be null when the StreamReader reaches the end of file
-                    while ((currentLine = sr.ReadLine()) != null)
-                    {
-                        
-
-                        var array = currentLine.Split(';');
+                       
 
                         var farmacia = new Farmacia();
-                        farmacia.CodiFarmacia = array[1];
-                        farmacia.NomFarmacia = array[2];
-                        farmacia.TipusVia = array[3];
-                        farmacia.Carrer = array[4];
-                        farmacia.NumeroVia = int.Parse(array[5]);
-                        farmacia.NumeroTelefon = array[6];
-                        farmacia.AreaBasicaSalut = array[7];
-
+                        farmacia.CodiFarmacia = arrayM[1];
+                        farmacia.NomFarmacia = arrayM[2];
+                        farmacia.TipusVia = arrayM[6];
+                        farmacia.Carrer = arrayM[4];
+                        farmacia.NumeroVia = int.Parse(arrayM[7]);
+                        farmacia.NumeroTelefon = arrayM[8];
+                        farmacia.AreaBasicaSalut = arrayM[9];
+                        farmacia.IdPoblacio = context.Poblacions.Where(x => x.CP == int.Parse(arrayM[5])).First().IdPoblacio;
                         context.Farmacies.Add(farmacia);
 
                     }
+                }
+                    // currentLine will be null when the StreamReader reaches the end of file
+
                     context.SaveChanges();
                 }
             }
-
-
-
         }
     }
-}
+
