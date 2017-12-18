@@ -43,7 +43,19 @@ namespace AplicacioFarmacies.Migrations
                         poblacio.CP = arrayM[5];
                         if (arrayM[5].Substring(0, 2).Equals("08"))
                         {
-                            poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Barcelona").First().Id;
+                            poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Barcelona").First().IdProvincia;
+                        }
+                        if (arrayM[5].Substring(0, 2).Equals("17"))
+                        {
+                            poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Girona").First().IdProvincia;
+                        }
+                        if (arrayM[5].Substring(0, 2).Equals("25"))
+                        {
+                            poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Lleida").First().IdProvincia;
+                        }
+                        if (arrayM[5].Substring(0, 2).Equals("43"))
+                        {
+                            poblacio.IdProvincia = context.Provincies.Where(x => x.NomProvincia == "Tarragona").First().IdProvincia;
                         }
                     }
                     // currentLine will be null when the StreamReader reaches the end of file
