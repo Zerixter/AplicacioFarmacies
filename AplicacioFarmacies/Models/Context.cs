@@ -33,6 +33,8 @@ namespace AplicacioFarmacies.Models
                 .HasForeignKey(k => k.IdPoblacio)
                 .WillCascadeOnDelete(true);
         }
+
+        public System.Data.Entity.DbSet<AplicacioFarmacies.Models.Comentari> Comentaris { get; set; }
     }
 }
 

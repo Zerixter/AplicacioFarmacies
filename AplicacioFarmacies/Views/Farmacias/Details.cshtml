@@ -1,82 +1,100 @@
 ﻿@model AplicacioFarmacies.Models.Farmacia
 
 @{
-    ViewBag.Title = "Details";
+    ViewBag.Title = "Detalls";
 }
 
-<h2>Details</h2>
+<h2>Detalls</h2>
 
 <div>
     <h4>Farmacia</h4>
     <hr />
-    <dl class="dl-horizontal">
-        <dt>
-            @Html.DisplayNameFor(model => model.Poblacio.NomPoblacio)
-        </dt>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.Poblacio.NomPoblacio)</b>
+                <br />
+                <span>@Html.DisplayFor(model => model.Poblacio.NomPoblacio)</span>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.Poblacio.NomPoblacio)
-        </dd>
+        <div class="col-md-6">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.CodiFarmacia)</b>
+                <br />
+                <span>@Html.DisplayFor(model => model.CodiFarmacia)</span>
+            </div>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.CodiFarmacia)
-        </dt>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.NomFarmacia)</b>
+                <br />
+                <span>@Html.DisplayFor(model => model.NomFarmacia)</span>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.CodiFarmacia)
-        </dd>
+        <div class="col-md-6">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.TipusVia)</b>
+                <br />
+                <span>@Html.DisplayFor(model => model.TipusVia)</span>
+            </div>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.NomFarmacia)
-        </dt>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.Carrer)</b>
+                <br />
+                <span>@Html.DisplayFor(model => model.Carrer)</span>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.NomFarmacia)
-        </dd>
+        <div class="col-md-6">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.NumeroVia)</b>
+                <br />
+                <span>@Html.DisplayFor(model => model.NumeroVia)</span>
+            </div>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.TipusVia)
-        </dt>
+    <div class="row">
+        <div class="col-md-6">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.NumeroTelefon)</b>
+                <br />
+                <span>@Html.DisplayFor(model => model.NumeroTelefon)</span>
+            </div>
+        </div>
 
-        <dd>
-            @Html.DisplayFor(model => model.TipusVia)
-        </dd>
+        <div class="col-md-6">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.AreaBasicaSalut)</b>
+                <br />
+                <span>@Html.DisplayFor(model => model.AreaBasicaSalut)</span>
+            </div>
+        </div>
+    </div>
 
-        <dt>
-            @Html.DisplayNameFor(model => model.Carrer)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.Carrer)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NumeroVia)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NumeroVia)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.NumeroTelefon)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.NumeroTelefon)
-        </dd>
-
-        <dt>
-            @Html.DisplayNameFor(model => model.AreaBasicaSalut)
-        </dt>
-
-        <dd>
-            @Html.DisplayFor(model => model.AreaBasicaSalut)
-        </dd>
-
-    </dl>
+    <div class="row">
+        <div class="col-md-12">
+            <div class="alert alert-info alert-farmacia">
+                <b>@Html.DisplayNameFor(model => model.Comentaris)</b>
+                <br />
+            </div>
+        </div>
+        <div class="col-md-12">
+            <div>
+                @Html.ActionLink("Afegir comentari", "Create")
+            </div>
+        </div>
+    </div>
 </div>
 <p>
-    @Html.ActionLink("Edit", "Edit", new { id = Model.IdFarmacia }) |
-    @Html.ActionLink("Back to List", "Index")
+    @Html.ActionLink("Tornar enrere", "Index")
 </p>

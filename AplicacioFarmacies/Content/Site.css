@@ -22,3 +22,9 @@ select,
 textarea {
     max-width: 280px;
 }
+
+.alert-farmacia {
+    background-color: #ededed;
+    border-color: #e6edef;
+    color: #628ea4;
+}
