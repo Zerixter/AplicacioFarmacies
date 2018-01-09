@@ -19,7 +19,7 @@ namespace AplicacioFarmacies.Models
         [Display(Name = "Carrer")]
         public string Carrer { get; set; }
         [Display(Name = "Numero de via")]
-        public int NumeroVia { get; set; }
+        public string NumeroVia { get; set; }
         [Display(Name = "Numero de telèfon")]
         public string NumeroTelefon { get; set; }
         [Display(Name = "Area bàsica de salut")]

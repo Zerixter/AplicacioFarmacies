@@ -7,13 +7,13 @@ namespace AplicacioFarmacies.Migrations
     using System.Resources;
     
     [GeneratedCode("EntityFramework.Migrations", "6.2.0-61023")]
-    public sealed partial class Migracio1 : IMigrationMetadata
+    public sealed partial class nova : IMigrationMetadata
     {
-        private readonly ResourceManager Resources = new ResourceManager(typeof(Migracio1));
+        private readonly ResourceManager Resources = new ResourceManager(typeof(nova));
         
         string IMigrationMetadata.Id
         {
-            get { return "201712141548404_Migracio1"; }
+            get { return "201801091450526_nova"; }
         }
         
         string IMigrationMetadata.Source

@@ -26,5 +26,7 @@ namespace AplicacioFarmacies.Controllers
 
             return View();
         }
+
+
     }
 }

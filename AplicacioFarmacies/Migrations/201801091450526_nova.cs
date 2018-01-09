@@ -3,7 +3,7 @@ namespace AplicacioFarmacies.Migrations
     using System;
     using System.Data.Entity.Migrations;
     
-    public partial class Migracio1 : DbMigration
+    public partial class nova : DbMigration
     {
         public override void Up()
         {
@@ -16,7 +16,7 @@ namespace AplicacioFarmacies.Migrations
                         NomFarmacia = c.String(),
                         TipusVia = c.String(),
                         Carrer = c.String(),
-                        NumeroVia = c.Int(nullable: false),
+                        NumeroVia = c.String(),
                         NumeroTelefon = c.String(),
                         AreaBasicaSalut = c.String(),
                         IdPoblacio = c.Int(nullable: false),
