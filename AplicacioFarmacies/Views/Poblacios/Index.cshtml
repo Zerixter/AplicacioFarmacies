@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<AplicacioFarmacies.Models.Poblacio>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Poblacio_Index";
 }
 
 <h2>Index</h2>
@@ -10,36 +10,20 @@
     @Html.ActionLink("Create New", "Create")
 </p>
 <table class="table">
-    <tr>
-        <th>
-            @Html.DisplayNameFor(model => model.Provincia.NomProvincia)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.NomPoblacio)
-        </th>
-        <th>
-            @Html.DisplayNameFor(model => model.CP)
-        </th>
-        <th></th>
-    </tr>
+    
+    <div class="panel panel-default">
+        @foreach (var item in Model)
+    {
+        <div class="col-md-6 panel panel-primary">
+            <div class="panel-heading">
+                @Html.DisplayFor(modelItem => item.NomPoblacio)
+            </div>
+            <div class="panel-footer">
+                @Html.ActionLink("Veure farmacies", "Details", new { id = item.IdPoblacio })
 
-@foreach (var item in Model) {
-    <tr>
-        <td>
-            @Html.DisplayFor(modelItem => item.Provincia.NomProvincia)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.NomPoblacio)
-        </td>
-        <td>
-            @Html.DisplayFor(modelItem => item.CP)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdPoblacio }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdPoblacio }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdPoblacio })
-        </td>
-    </tr>
-}
+            </div>
+        </div>
+        }
 
 </table>
+

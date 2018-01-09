@@ -1,7 +1,7 @@
 ﻿@model IEnumerable<AplicacioFarmacies.Models.Provincia>
 
 @{
-    ViewBag.Title = "Index";
+    ViewBag.Title = "Home Page";
 }
 
 <h2>Index</h2>
@@ -9,25 +9,20 @@
 <p>
     @Html.ActionLink("Create New", "Create")
 </p>
-<table class="table">
-    <tr>
-        <th>
+
+<div class="panel panel-default">
+@foreach (var item in Model)
+{
+    <div class="col-md-6 panel panel-primary">
+        <div class="panel-heading">
             @Html.DisplayNameFor(model => model.NomProvincia)
-        </th>
-        <th></th>
-    </tr>
-
-@foreach (var item in Model) {
-    <tr>
-        <td>
+        </div>
+        <div class="panel-body">
             @Html.DisplayFor(modelItem => item.NomProvincia)
-        </td>
-        <td>
-            @Html.ActionLink("Edit", "Edit", new { id=item.IdProvincia }) |
-            @Html.ActionLink("Details", "Details", new { id=item.IdProvincia }) |
-            @Html.ActionLink("Delete", "Delete", new { id=item.IdProvincia })
-        </td>
-    </tr>
+        </div>
+        <div class="panel-footer">
+            @Html.ActionLink("Veure població", "Details", new { id = item.IdProvincia })
+        </div>
+    </div>
 }
-
-</table>
+</div>
