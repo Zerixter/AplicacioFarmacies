@@ -33,6 +33,10 @@ namespace AplicacioFarmacies.Controllers
             {
                 return HttpNotFound();
             }
+            List<Comentari> Comentaris = db.Comentaris.Where(x => x.IdFarmacia == id).ToList();
+
+            ViewBag.Comentaris = Comentaris;
+            ViewBag.Farmacia = farmacia;
             return View(farmacia);
         }
 

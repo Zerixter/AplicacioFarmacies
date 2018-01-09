@@ -86,15 +86,22 @@
             <div class="alert alert-info alert-farmacia">
                 <b>@Html.DisplayNameFor(model => model.Comentaris)</b>
                 <br />
+                <hr />
+                @foreach (var x in ViewBag.Comentaris)
+                 {
+                    <p><b>Autor:</b> @x.NomAutorComentari</p>
+                    <p><b>Comentari:</b> @x.ContingutComentari</p>
+                    <hr />
+                 }
             </div>
         </div>
         <div class="col-md-12">
             <div>
-                @Html.ActionLink("Afegir comentari", "Create", "Comentaris", null, null)
+                @Html.ActionLink("Afegir comentari", "CreateByIdFarmacia", "Comentaris", new { id = ViewBag.Farmacia.IdFarmacia }, null)
+            </div>
+            <div>
+                @Html.ActionLink("Tornar enrere", "Index")
             </div>
         </div>
     </div>
 </div>
-<p>
-    @Html.ActionLink("Tornar enrere", "Index")
-</p>

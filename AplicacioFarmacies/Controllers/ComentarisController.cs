@@ -54,9 +54,16 @@ namespace AplicacioFarmacies.Controllers
         }
 
         [HttpPost]
-        public ActionResult CreateByIdFarmacia([Bind(Include = "IdComentari, NomAutorComentari, ContingutComentariIdFarmacia")] Comentari comentari)
+        [Route("Comentaris/CreateByIdFarmacia/{id_farmacia:int}", Name = "Crear_Comentaris_Per_Farmacia_2")]
+        public ActionResult CreateByIdFarmacia([Bind(Include = "IdComentari,NomAutorComentari,ContingutComentari,IdFarmacia")] Comentari comentari)
         {
-            return View();
+            if (ModelState.IsValid)
+            {
+                db.Comentaris.Add(comentari);
+                db.SaveChanges();
+                return RedirectToAction("Details", "Farmacias", new { id = comentari.IdFarmacia });
+            }
+            return View(comentari);
         }
        
 
