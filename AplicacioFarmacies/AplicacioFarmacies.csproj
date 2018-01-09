@@ -230,6 +230,7 @@
     <Content Include="Views\Comentaris\Details.cshtml" />
     <Content Include="Views\Comentaris\Edit.cshtml" />
     <Content Include="Views\Comentaris\Index.cshtml" />
+    <Content Include="Views\Comentaris\CreateByIdFarmacia.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
