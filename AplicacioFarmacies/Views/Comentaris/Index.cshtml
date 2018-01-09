@@ -1,0 +1,45 @@
+﻿@model IEnumerable<AplicacioFarmacies.Models.Comentari>
+
+@{
+    ViewBag.Title = "Index";
+}
+
+<h2>Index</h2>
+
+<p>
+    @Html.ActionLink("Create New", "Create")
+</p>
+<table class="table">
+    <tr>
+        <th>
+            @Html.DisplayNameFor(model => model.Farmacia.CodiFarmacia)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.NomAutorComentari)
+        </th>
+        <th>
+            @Html.DisplayNameFor(model => model.ContingutComentari)
+        </th>
+        <th></th>
+    </tr>
+
+@foreach (var item in Model) {
+    <tr>
+        <td>
+            @Html.DisplayFor(modelItem => item.Farmacia.CodiFarmacia)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.NomAutorComentari)
+        </td>
+        <td>
+            @Html.DisplayFor(modelItem => item.ContingutComentari)
+        </td>
+        <td>
+            @Html.ActionLink("Edit", "Edit", new { id=item.IdComentari }) |
+            @Html.ActionLink("Details", "Details", new { id=item.IdComentari }) |
+            @Html.ActionLink("Delete", "Delete", new { id=item.IdComentari })
+        </td>
+    </tr>
+}
+
+</table>

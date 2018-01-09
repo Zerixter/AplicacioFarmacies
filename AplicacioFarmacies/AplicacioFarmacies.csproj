@@ -148,6 +148,7 @@
     <Compile Include="App_Start\BundleConfig.cs" />
     <Compile Include="App_Start\FilterConfig.cs" />
     <Compile Include="App_Start\RouteConfig.cs" />
+    <Compile Include="Controllers\ComentarisController.cs" />
     <Compile Include="Controllers\FarmaciasController.cs" />
     <Compile Include="Controllers\HomeController.cs" />
     <Compile Include="Controllers\PoblaciosController.cs" />
@@ -159,7 +160,12 @@
     <Compile Include="Migrations\201712141548404_Migracio1.Designer.cs">
       <DependentUpon>201712141548404_Migracio1.cs</DependentUpon>
     </Compile>
+    <Compile Include="Migrations\201712191712340_Update.cs" />
+    <Compile Include="Migrations\201712191712340_Update.Designer.cs">
+      <DependentUpon>201712191712340_Update.cs</DependentUpon>
+    </Compile>
     <Compile Include="Migrations\Configuration.cs" />
+    <Compile Include="Models\Comentari.cs" />
     <Compile Include="Models\Context.cs" />
     <Compile Include="Models\Farmacia.cs" />
     <Compile Include="Models\Poblacio.cs" />
@@ -178,6 +184,7 @@
     <Content Include="ApplicationInsights.config">
       <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
     </Content>
+    <Content Include="Archivos\farmacies.csv" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
     <Content Include="Scripts\jquery-1.10.2.js" />
     <Content Include="Scripts\jquery-1.10.2.min.js" />
@@ -218,6 +225,11 @@
     <Content Include="Views\Provincias\Details.cshtml" />
     <Content Include="Views\Provincias\Edit.cshtml" />
     <Content Include="Views\Provincias\Index.cshtml" />
+    <Content Include="Views\Comentaris\Create.cshtml" />
+    <Content Include="Views\Comentaris\Delete.cshtml" />
+    <Content Include="Views\Comentaris\Details.cshtml" />
+    <Content Include="Views\Comentaris\Edit.cshtml" />
+    <Content Include="Views\Comentaris\Index.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -239,6 +251,9 @@
   <ItemGroup>
     <EmbeddedResource Include="Migrations\201712141548404_Migracio1.resx">
       <DependentUpon>201712141548404_Migracio1.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="Migrations\201712191712340_Update.resx">
+      <DependentUpon>201712191712340_Update.cs</DependentUpon>
     </EmbeddedResource>
   </ItemGroup>
   <PropertyGroup>

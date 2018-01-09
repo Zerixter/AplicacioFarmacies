@@ -1,0 +1,42 @@
+﻿@model AplicacioFarmacies.Models.Comentari
+
+@{
+    ViewBag.Title = "Details";
+}
+
+<h2>Details</h2>
+
+<div>
+    <h4>Comentari</h4>
+    <hr />
+    <dl class="dl-horizontal">
+        <dt>
+            @Html.DisplayNameFor(model => model.Farmacia.CodiFarmacia)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.Farmacia.CodiFarmacia)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.NomAutorComentari)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.NomAutorComentari)
+        </dd>
+
+        <dt>
+            @Html.DisplayNameFor(model => model.ContingutComentari)
+        </dt>
+
+        <dd>
+            @Html.DisplayFor(model => model.ContingutComentari)
+        </dd>
+
+    </dl>
+</div>
+<p>
+    @Html.ActionLink("Edit", "Edit", new { id = Model.IdComentari }) |
+    @Html.ActionLink("Back to List", "Index")
+</p>

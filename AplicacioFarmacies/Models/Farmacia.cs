@@ -30,5 +30,7 @@ namespace AplicacioFarmacies.Models
         [Display(Name = "Població")]
         public int IdPoblacio { get; set; }
         public virtual Poblacio Poblacio { get; set; }
+
+        public virtual List<Comentari> TotsElsComentaris { get; set; } = new List<Comentari>();
     }
 }
